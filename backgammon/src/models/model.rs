@@ -5,7 +5,7 @@ use burn::{
     tensor::{activation::sigmoid, backend::Backend, ElementConversion, Tensor},
 };
 
-use crate::backgammon::{
+use crate::core::{
     board::BackgammonBoard,
     dice::DiceRoll,
     moves::{generate_all_move_sequences, MoveSequence},
@@ -47,7 +47,7 @@ impl<B: Backend> Model<B> {
         sigmoid(x).reshape([1])
     }
 
-    pub(crate)fn get_board_features(
+    pub(crate) fn get_board_features(
         &self,
         board: &BackgammonBoard,
         player_color: PlayerColor,

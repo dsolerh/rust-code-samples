@@ -11,11 +11,9 @@ use burn::{
     },
 };
 
-use crate::backgammon::{
-    agent::{Agent, LogicAgent, ModelAgent},
+use crate::core::{
     board::BackgammonBoard,
     dice::DiceRoll,
-    game::{play_game, won},
     players::{get_opponent, get_random_player, BLACK_PLAYER, RED_PLAYER},
     positions::{BLACK_OFF, RED_OFF},
 };
@@ -34,15 +32,6 @@ fn check_last_pred<B: Backend>(
         None
     }
 }
-
-// def check_terminal(board):
-//     if board[BLACK_GOAL] == -15:
-//         return 0, True
-
-//     elif board[RED_GOAL] == 15:
-//         return 1, True
-
-//     return None, False
 
 #[derive(Config)]
 pub(crate) struct ModelTrainingConfig {

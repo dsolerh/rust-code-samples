@@ -1,10 +1,11 @@
-use crate::backgammon::board::Point;
+use crate::core::board::Point;
 use rand::seq::SliceRandom;
 
 pub(crate) type PlayerColor = i8;
 
 pub(crate) const BLACK_PLAYER: PlayerColor = -1;
 pub(crate) const RED_PLAYER: PlayerColor = 1;
+pub(crate) const NO_PLAYER: PlayerColor = 0;
 
 pub(crate) fn get_random_player() -> PlayerColor {
     [BLACK_PLAYER, RED_PLAYER]

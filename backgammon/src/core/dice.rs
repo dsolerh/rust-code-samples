@@ -3,7 +3,7 @@ use rand::Rng;
 pub(crate) type Die = u8;
 
 #[derive(Debug)]
-pub(crate) enum DiceRoll {
+pub enum DiceRoll {
     Single(Die, Die),
     Double(Die),
 }

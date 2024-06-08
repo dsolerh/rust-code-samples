@@ -13,11 +13,11 @@ use super::{
 };
 
 #[derive(Debug, Clone)]
-pub(crate) struct MoveWithDie {
-    pub(crate) src: Position,
-    pub(crate) dst: Position,
+pub struct MoveWithDie {
+    pub src: Position,
+    pub dst: Position,
     #[allow(dead_code)]
-    pub(crate) die: Die,
+    pub die: Die,
 }
 
 impl MoveWithDie {
@@ -154,7 +154,7 @@ pub(crate) fn get_moves(
 }
 
 #[derive(Debug, Clone)]
-pub(crate) enum MoveSequence {
+pub enum MoveSequence {
     SingleMove(MoveWithDie),
     TwoMoves(MoveWithDie, MoveWithDie),
     ThreeMoves(MoveWithDie, MoveWithDie, MoveWithDie),
