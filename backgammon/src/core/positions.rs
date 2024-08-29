@@ -150,7 +150,3 @@ mod tests {
         assert_eq!(positions, (19..=24).collect::<Vec<_>>());
     }
 }
-
-// def pos_iter(player, start=None):
-//     start = start if start is not None else normalize_pos(24, player)
-//     return range(start, normalize_pos(0, player), player)
