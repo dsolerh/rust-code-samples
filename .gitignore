@@ -11,3 +11,4 @@ problems/target
 backgammon/target
 bench_example/target
 algorithms/target
+serde-whatnow/target
