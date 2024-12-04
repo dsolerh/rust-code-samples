@@ -7,4 +7,4 @@ edition = "2021"
 
 [dependencies]
 async-std = "1.7"
-surf = "1.0"
+async-channel = "=2.3.0"
