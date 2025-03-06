@@ -1,5 +1,5 @@
 [package]
-name = "problems"
+name = "aoc"
 version = "0.1.0"
 edition = "2021"
 
@@ -9,3 +9,4 @@ edition = "2021"
 lazy_static = "1.4.0"
 rayon = "1.8.1"
 anyhow = "1.0.79"
+reqwest = { version = "0.12.9", features = ["blocking"] }
