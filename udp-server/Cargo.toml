@@ -1,3 +1,8 @@
+bin = [
+    { name = "receiver", path = "bin/receiver.rs" },
+    { name = "sender", path = "bin/sender.rs" },
+]
+
 [package]
 name = "udp-server"
 version = "0.1.0"
