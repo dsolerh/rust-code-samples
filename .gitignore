@@ -17,3 +17,4 @@ arithmetic-exp-eval/.DS_Store
 bevy/sample/target
 apis/reserv/target
 udp-server/target
+webapi/axum-sqlx-pg-example/target
