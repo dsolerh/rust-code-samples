@@ -19,3 +19,5 @@ apis/reserv/target
 udp-server/target
 webapi/axum-sqlx-pg-example/target
 crates/target
+database/seaorm/target
+.DS_Store
