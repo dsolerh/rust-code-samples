@@ -17,6 +17,9 @@ async-trait = "0.1.88"
 clap = { version = "4.5.35", features = ["derive"] }
 dotenvy = "0.15.7"
 mockall = "0.13.1"
+nom = "8.0.0"
+sea-orm = "1.1.10"
+sea-orm-migration = "1.1.10"
 sqlx = { version = "0.8.3", features = ["runtime-tokio", "sqlite", "postgres"] }
 tokio = { version = "1.44.2", features = ["full"] }
 tracing = "0.1.41"
