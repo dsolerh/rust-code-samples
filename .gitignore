@@ -21,3 +21,4 @@ webapi/axum-sqlx-pg-example/target
 crates/target
 database/seaorm/target
 .DS_Store
+webapi/udp-server/target
