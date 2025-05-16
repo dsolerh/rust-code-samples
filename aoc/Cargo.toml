@@ -3,10 +3,11 @@ name = "aoc"
 version = "0.1.0"
 edition = "2021"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
 [dependencies]
 lazy_static = "1.4.0"
 rayon = "1.8.1"
 anyhow = "1.0.79"
 reqwest = { version = "0.12.9", features = ["blocking"] }
+dotenvy = "0.15.7"
+clap = { version = "4.5.37", features = ["derive"] }
+rstest = "0.25.0"
