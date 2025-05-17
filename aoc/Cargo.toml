@@ -11,3 +11,4 @@ reqwest = { version = "0.12.9", features = ["blocking"] }
 dotenvy = "0.15.7"
 clap = { version = "4.5.37", features = ["derive"] }
 rstest = "0.25.0"
+nom = "8.0.0"

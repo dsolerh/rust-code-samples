@@ -17,6 +17,7 @@ impl<'a> SolutionsMap<'a> {
         // register the solutions here
         map.insert("2023_1", y2023::day_1::Solution::boxed());
         map.insert("2023_2", y2023::day_2::Solution::boxed());
+        map.insert("2023_3", y2023::day_3::Solution::boxed());
         //
         Self { solutions: map }
     }
