@@ -29,6 +29,7 @@ fn main() -> anyhow::Result<()> {
     Ok(())
 }
 
+#[allow(dead_code)]
 fn parse_integer_pair(input: &str) -> IResult<&str, (i32, i32)> {
     separated_pair(parse_i32, tag(", "), parse_i32).parse(input)
 }

@@ -1,16 +1,22 @@
 use std::{fmt::Display, thread};
 
 use tracing::{Level, debug, error, info, span, trace, warn};
-use tracing_subscriber::fmt::format::FmtSpan;
+use tracing_subscriber::{EnvFilter, layer::SubscriberExt, util::SubscriberInitExt};
 
 #[tokio::main]
 async fn main() {
     println!("Hello, tracing!!");
     // the picks the envents sent by the tracing macros and prints them in the console
-    tracing_subscriber::fmt()
-        .with_max_level(Level::TRACE)
-        .with_span_events(FmtSpan::FULL)
-        // .pretty()
+    // tracing_subscriber::fmt()
+    //     .with_max_level(Level::TRACE)
+    //     .with_span_events(FmtSpan::FULL)
+    //     // .pretty()
+    //     .init();
+    //
+
+    tracing_subscriber::registry()
+        .with(EnvFilter::try_from_env("LOG_LEVEL").unwrap_or(EnvFilter::new("info")))
+        .with(tracing_subscriber::fmt::layer())
         .init();
 
     let span = span!(Level::INFO, "main");
@@ -103,7 +109,7 @@ async fn handle_file_async(file: String) {
 }
 
 fn some_expensive_computation() -> i32 {
-    println!("doing something really intensive with the CPU");
+    // println!("doing something really intensive with the CPU");
     55
 }
 
