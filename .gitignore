@@ -25,3 +25,6 @@ webapi/udp-server/target
 # aoc project
 aoc/target
 aoc/data
+frameworks/axum/target
+concepts/target
+leetcode/target
