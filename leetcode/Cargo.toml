@@ -1,0 +1,28 @@
+[[example]]
+name = "contains_duplicates"
+test = true
+path = "examples/contains_duplicates/solution.rs"
+
+[[example]]
+name = "is_anagram"
+test = true
+path = "examples/is_anagram/solution.rs"
+
+[[example]]
+name = "two_sum"
+test = true
+path = "examples/two_sum/solution.rs"
+
+[[example]]
+name = "group_anagrams"
+test = true
+path = "examples/group_anagrams/solution.rs"
+
+
+[package]
+name = "leetcode"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+rstest = "0.25.0"
