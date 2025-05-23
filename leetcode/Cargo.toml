@@ -18,6 +18,11 @@ name = "group_anagrams"
 test = true
 path = "examples/group_anagrams/solution.rs"
 
+[[example]]
+name = "top_K_frequent"
+test = true
+path = "examples/top_K_frequent/solution.rs"
+
 
 [package]
 name = "leetcode"
