@@ -23,6 +23,20 @@ name = "top_K_frequent"
 test = true
 path = "examples/top_K_frequent/solution.rs"
 
+[[example]]
+name = "encode_decode_string"
+test = true
+path = "examples/encode_decode_string/solution.rs"
+
+[[example]]
+name = "prod_but_self"
+test = true
+path = "examples/prod_but_self/solution.rs"
+
+[[example]]
+name = "valid_sudoku"
+test = true
+path = "examples/valid_sudoku/solution.rs"
 
 [package]
 name = "leetcode"
