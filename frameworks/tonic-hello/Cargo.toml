@@ -1,0 +1,22 @@
+[package]
+name = "tonic-hello"
+version = "0.1.0"
+edition = "2024"
+
+[[bin]]
+name = "hello-server"
+path = "src/bin/server.rs"
+
+[[bin]]
+name = "hello-client"
+path = "src/bin/client.rs"
+
+[dependencies]
+anyhow = "1.0.98"
+prost = "0.13.5"
+tokio = { version = "1.45.1", features = ["macros", "rt-multi-thread"] }
+tonic = "0.13.1"
+
+[build-dependencies]
+anyhow = "1.0.98"
+tonic-build = "0.13.1"
