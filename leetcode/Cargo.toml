@@ -38,6 +38,11 @@ name = "valid_sudoku"
 test = true
 path = "examples/valid_sudoku/solution.rs"
 
+[[example]]
+name = "longest_sequence"
+test = true
+path = "examples/longest_sequence/solution.rs"
+
 [package]
 name = "leetcode"
 version = "0.1.0"
