@@ -67,3 +67,16 @@ where
     }
     Ok(())
 }
+
+// pub fn send_response(session: &str, year: usize, day: usize) {
+//     let client = reqwest::blocking::Client::new();
+//     let res = client
+//         .get(format!("{AOC_URL}/{year}/day/{day}/input"))
+//         .timeout(Duration::from_secs(10))
+//         .header(ACCEPT, "text/html")
+//         .header(COOKIE, format!("session={session}"))
+//         .send()
+//         .context("could not send the request to get the data from the api")?
+//         .error_for_status()
+//         .context("api reponded with an invalid status")?;
+// }

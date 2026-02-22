@@ -14,7 +14,7 @@ enum Commands {
     Offer {
         /// the name of the recruiter to address the message to
         #[arg(short, long)]
-        name: String,
+        name: Option<String>,
 
         /// specify a category like (gracious,polite,short,etc..)
         /// to check the categoties use --category-list
@@ -31,16 +31,18 @@ fn main() {
     let args = Args::parse();
     let (messages, categories) = init_messages();
     match args.commands {
+        // check the categories (no name needed)
         Commands::Offer {
-            name: _,
-            category: _,
+            name: None,
+            category: None,
             category_list,
         } if category_list => {
             // list all the categories
             println!("{:?}", categories);
         }
+        // give reply for name with a specified category
         Commands::Offer {
-            name,
+            name: Some(name),
             category: Some(category),
             category_list: _,
         } => {
@@ -60,9 +62,10 @@ fn main() {
                 .set_text(message)
                 .expect("could not set the message to the clipboard");
         }
+        // give reply for name with random category
         Commands::Offer {
-            name,
-            category: _,
+            name: Some(name),
+            category: None,
             category_list: _,
         } => {
             let msg_content = get_random_message(messages);
@@ -72,6 +75,7 @@ fn main() {
                 .set_text(message)
                 .expect("could not set the message to the clipboard");
         }
+        _ => println!("invalid arguments"),
     }
 }
 
